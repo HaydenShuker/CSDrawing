@@ -1,0 +1,6 @@
+/Users/Shuker/Projects/OkThisIsTheRealOneZZZ/OkThisIsTheRealOne/bin/Debug/OkThisIsTheRealOne.exe
+/Users/Shuker/Projects/OkThisIsTheRealOneZZZ/OkThisIsTheRealOne/bin/Debug/OkThisIsTheRealOne.pdb
+/Users/Shuker/Projects/OkThisIsTheRealOneZZZ/OkThisIsTheRealOne/obj/x86/Debug/OkThisIsTheRealOne.csprojResolveAssemblyReference.cache
+/Users/Shuker/Projects/OkThisIsTheRealOneZZZ/OkThisIsTheRealOne/obj/x86/Debug/OkThisIsTheRealOne.csproj.CoreCompileInputs.cache
+/Users/Shuker/Projects/OkThisIsTheRealOneZZZ/OkThisIsTheRealOne/obj/x86/Debug/OkThisIsTheRealOne.exe
+/Users/Shuker/Projects/OkThisIsTheRealOneZZZ/OkThisIsTheRealOne/obj/x86/Debug/OkThisIsTheRealOne.pdb
