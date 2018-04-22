@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 
@@ -12,7 +12,7 @@ namespace CursorMovement
 
     class Drawing
     {
-        static bool[,] Marks = new bool[Binds.xmax + 1, Binds.ymax + 1];
+        static bool[,] Canvas = new bool[Binds.xmax + 1, Binds.ymax + 1];
 
         static int lineStartx, lineStarty;
 
@@ -34,7 +34,7 @@ namespace CursorMovement
             {
                 for (int yscan = 0; yscan < Binds.ymax + 1; yscan++)
                 {
-                    if (Marks[xscan, yscan] == true)
+                    if (Canvas[xscan, yscan] == true)
                     {
                         WriteAt(xscan, yscan, "O");
                     }
@@ -51,12 +51,17 @@ namespace CursorMovement
             Console.Write(text);
         }
 
+        // Edit the Canvas
+        static void EditCanvas(int x, int y) {
+            Canvas[x, y] = !Canvas[x, y];
+        }
+
         // Draw If Input
         static void InputDraw()
         {
             if (MainClass.input == "Draw")
             {
-                Marks[Cursor.x, Cursor.y] = true;
+                EditCanvas(Cursor.x, Cursor.y);
             }
             else if (MainClass.input == "Line")
             {
@@ -79,11 +84,11 @@ namespace CursorMovement
                             if (lineFroth)
                             {
 
-                                ssMarks[Cursor.x, lineStarty + count] = true;
+                                EditCanvas(Cursor.x, lineStarty + count);
                             }
                             else
                             {
-                                Marks[Cursor.x, lineStarty - count] = true;
+                                EditCanvas(Cursor.x, lineStarty - count);
                             }
                         }
                     }
@@ -93,11 +98,11 @@ namespace CursorMovement
                         {
                             if (lineFroth)
                             {
-                                Marks[lineStartx + count, Cursor.y] = true;
+                                EditCanvas(lineStartx + count, Cursor.y);
                             }
                             else
                             {
-                                Marks[lineStartx - count, Cursor.y] = true;
+                                EditCanvas(lineStartx - count, Cursor.y);
                             }
                         }
                     }
